@@ -23,7 +23,7 @@ To work out your home directory path, run::
 
 	$ python -c "import os.path; print os.path.expanduser('~')"
 
-In my case, that file looks like:
+In my case, that file looks like::
 
 	[buildout]
 	eggs-directory = /Users/kim/.buildout/eggs
@@ -33,11 +33,11 @@ In my case, that file looks like:
 Create the ``~/.buildout/eggs``, ``~/.buildout/downloads`` and
 ``~/.buildout/extends`` folders as required.
 
-In my case:
+In my case::
 
-	mkdir /Users/kim/.buildout/eggs
-	mkdir /Users/kim/.buildout/downloads
-	mkdir /Users/kim/.buildout/extends
+	$ mkdir /Users/kim/.buildout/eggs
+	$ mkdir /Users/kim/.buildout/downloads
+	$ mkdir /Users/kim/.buildout/extends
 
 Let's now create a buildout in a new directory::
 
