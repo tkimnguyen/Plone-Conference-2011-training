@@ -10,6 +10,8 @@ Before we start, we should ensure we have a shared cache for eggs and downloads
 that buildout fetches from the internet. This helps reduce download times
 without compromising repeatability.
 
+mkdir ~/.buildout
+
 If you don't have one already, create a ~/.buildout/default.cfg file::
 
 	[buildout]
@@ -21,8 +23,21 @@ To work out your home directory path, run::
 
 	$ python -c "import os.path; print os.path.expanduser('~')"
 
+In my case, that file looks like:
+
+	[buildout]
+	eggs-directory = /Users/kim/.buildout/eggs
+	download-cache = /Users/kim/.buildout/downloads
+	extends-cache  = /Users/kim/.buildout/extends
+
 Create the ``~/.buildout/eggs``, ``~/.buildout/downloads`` and
 ``~/.buildout/extends`` folders as required.
+
+In my case:
+
+	mkdir /Users/kim/.buildout/eggs
+	mkdir /Users/kim/.buildout/downloads
+	mkdir /Users/kim/.buildout/extends
 
 Let's now create a buildout in a new directory::
 
